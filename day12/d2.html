@@ -3,22 +3,40 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style>
+	.msg{border: 40px groove #ff0;background: #f00;}
+	</style>
 </head>
 <body>
-	<form action="">
-		用户名:<input type="text" /><br />
-		密码:<input type="password" /><br />
-		单选:<input type="radio" name="cc" />哈哈哈
-			 <input type="radio" name="cc" />小行星
-			 <input type="radio" name="cc" />酷酷酷<br />
-		多选:<input type="checkbox" name="dd" />qqq
-			 <input type="checkbox" name="dd" />aaa
-			 <input type="checkbox" name="dd" />zzz<br />
-		下拉列表:<select>
-			<option>1995</option>
-			<option selected>1996</option>
-			<option>1997</option>
-		</select>
-	</form>
+	<button id="big">+</button>
+	<button id="small">-</button>
+	<button id="red">红</button>
+	<button id="yello">黄</button>
+	<p id="msg">程序员挺好的,就是头冷sunday程序员挺好的,就是头冷sunday程序员挺好的,就是头冷sunday程序员挺好的,就是头冷sunday程序员挺好的,就是头冷sunday程序员挺好的,就是头冷sunday程序员挺好的,就是头冷sunday程序员挺好的,就是头冷sunday程序员挺好的,就是头冷sunday</p>
+<script>
+	var oBig=document.getElementById("big");
+	var oSmall=document.getElementById("small");
+	var oRed=document.getElementById("red");
+	var oMsg=document.getElementById("msg");
+	
+	var num=14;
+
+	//功能:
+	oBig.onclick=function(){
+		num=num+2;
+		console.log(num);
+		oMsg.style.fontSize=num+"px";
+	}
+	oSmall.onclick=function(){
+		num-=2;
+		console.log(num);
+		oMsg.style.fontSize=num+"px";
+	}
+	oRed.onclick=function(){
+		oMsg.className="msg";
+	}
+
+
+</script>
 </body>
 </html>
