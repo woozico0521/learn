@@ -1,0 +1,82 @@
+ 一.浮动float(漂移)
+功能:
+a. 将垂直的元素变成水平排列.方向:left/right
+b. 内联元素float后,具备块元素的宽度和高度的属性.
+   块元素float后,具备内联元素特征水平排列,但保留原有宽和高.
+总结: 
+1.所有元素在float后,水平排列,具有宽高属性.
+2.元素float后, 脱离原有的文档流
+
+c. 清除浮动:
+clear:both;
+
+
+
+二.内联元素和块元素的相互转换
+display: block/inline/inline-block/none;
+
+三.元素的显示/隐藏
+1.display:block/none;
+2.opacity: 1/0;
+
+
+布局方法: 一分为二
+
+四.定位 position ==>找原点位置
+功能: 特效
+x轴: left/right
+y轴: top/bottom
+
+1. static (静态定位,默认值)
+
+2. fixed (固定定位)
+原点: 默认浏览器左上角(left=0,top=0),其余三个角也可以成为原点(适用于所有定位):
+右上角(right=0; top=0;)
+左下角(left=0; bottom=0;)
+右下角(right=0; bottom=0;)
+定义: 脱离文档流,生效时,静止在坐标位置不动.
+
+3. relative(相对)
+原点: **不脱离文档流**,默认元素自身的左上角(left=0,top=0)
+注意: relative唯一一个不脱离文档流的定位.
+
+4. absolute(绝对)
+共性: 脱离文档流
+1). 无父级
+定义: 原点是浏览器的左上角(left=0,top=0),
+
+2). 有父级
+定义: 原点是离当前元素最近的父级元素的左上角(left=0,top=0)
+
+
+rgba
+
+red green blue alpha(0~1)
+0    0     0  :黑
+f    f     f  :白
+f    0     0  : red
+0    f     0  : green
+0    0     f  : blue
+c    c     c  : gray
+
+
+background-color: 颜色
+background-image: 图片
+background-repeat: 重复 repeat no-repeat repeat-x repeat-y
+background-position: 定位
+注意: 背景定位
+1.背景定位的原点默认是其所在容器的左上角
+2. x轴: left center right px
+   y轴: top  center bottom px
+
+
+
+
+
+
+
+
+
+
+
+
