@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	请输入内容:<input type="text" id="input" /><br/>
+	请输入次数:<input type="text" id="n" /><br/>
+	<button id="btn">确定</button>
+	<div id="msg"></div>
+<script>
+	var oInput=document.getElementById("input");
+	var oN=document.getElementById("n");
+	var oBtn=document.getElementById("btn");
+	var oMsg=document.getElementById("msg");
+	var str=oInput.value;
+	var x;
+	    x=parseInt(oN.value);
+		for(var i=0;i<x;i++){
+			document.write(str+"<br/>");
+		}
+	/*oBtn.onclick=function(){
+		
+		oMsg.innerHTML=str+"<br/>";
+	}*/
+	
+</script>
+</body>
+</html>
