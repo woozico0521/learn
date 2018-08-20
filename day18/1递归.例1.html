@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+   #name{color: #ff6a00;font-size: 36px;} 
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<ul>
+    <li>抽奖: <strong id="name">豪华大奖等你来拿!</strong></li>
+    <li><button id="btn">点击抽奖</button></li>
+</ul>
+<script>
+var oName=document.getElementById("name");
+var oBtn=document.getElementById("btn");
+var gift=['skii','雅诗兰黛小棕瓶','流金水','飞利浦洗脸仪','mac眼影盘','iPadpro','Dior口红','香奈儿包','爱马仕','蕾哈娜'];
+var i=0;//统计内容变化次数
+
+oBtn.onclick=function(){
+    view();
+}
+
+function view(){
+    i++;
+    console.log(i);
+    if(i<10){//递归条件
+        setTimeout(view,200);//递归前进段(动画)
+    }else{
+        i=0;
+    }
+    //递归返回段
+    var rand=parseInt(Math.random()*gift.length);
+    oName.innerText=gift[rand];
+    
+}
+
+
+</script>
+</body>
+</html>
