@@ -5,19 +5,27 @@
 	<title>Document</title>
 </head>
 <body>
-	<table border="1" cellspacing="1" cellpadding="1" width="300" height="300" >
-		<tr align="center">
-			<td rowspan="3">1</td>
-			<td colspan="2">2</td>
-		</tr>
-		<tr align="center">
-			<td>5</td>
-			<td>6</td>
-		</tr>
-		<tr align="center">
-			<td>8</td>
-			<td>9</td>
-		</tr>
-	</table>
+	<button id="big">+</button>
+	<button id="small">-</button>
+	<p id="msg">程序员挺好的,就是头冷sunday程序员挺好的,就是头冷sunday程序员挺好的,就是头冷sunday程序员挺好的,就是头冷sunday程序员挺好的,就是头冷sunday程序员挺好的,就是头冷sunday程序员挺好的,就是头冷sunday程序员挺好的,就是头冷sunday程序员挺好的,就是头冷sunday</p>
+<script>
+	var oBig=document.getElementById("big");
+	var oSmall=document.getElementById("small");
+	var oMsg=document.getElementById("msg");
+	var num=14;
+
+	//功能:
+	oBig.onclick=function(){
+		num=num+2;
+		console.log(num);
+		oMsg.style.fontSize=num+"px";
+	}
+	oSmall.onclick=function(){
+		num-=2;
+		console.log(num);
+		oMsg.style.fontSize=num+"px";
+	}
+
+</script>
 </body>
 </html>
