@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<h1 id="show">哈哈哈哈哈</h1>
+
+
+
+<script>
+var oH1=document.getElementById("show");
+var num=0;
+
+setInterval(function(){
+	num++;
+	if (num==7) {
+		num=0;
+	}
+	oH1.innerHTML=num;
+},1000)
+
+
+
+
+
+
+</script>
+</body>
+</html>

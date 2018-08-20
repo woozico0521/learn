@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<button>前进</button>
+<button>后退</button>
+
+
+<script>
+	oBtn=document.getElementsByTagName("button");
+	
+	
+	oBtn[0].onclick=function(){
+		history.forward();
+	}
+	oBtn[1].onclick=function(){
+		history.back();
+	}
+</script>
+<!-- 
+1.file:///E:/oracle/web-union/practice/day8/d1.html
+2.file:///E:/oracle/web-union/practice/day8/d2.html
+3.file:///E:/oracle/web-union/practice/day8/d4.html
+var s1="http://fanyi.baidu.com/?aldtype=16047#auto/zh"; -->
+</body>
+</html>

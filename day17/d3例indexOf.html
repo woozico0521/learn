@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	//根据客户端类型来传递网页链接(pc/mobile)
+	function testDevice(){
+		if (navigator.userAgent.indexOf("iPhone")!=-1 || navigator.userAgent.indexOf("Android")!=-1) {
+			location.href="http://m.2345.com/";
+		}else{
+			location.href="http://www.2345.com.cn/"
+		}
+	}
+
+	testDevice();
+
+
+
+
+</script>
+</body>
+</html>
