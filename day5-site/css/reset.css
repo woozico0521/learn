@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+body,ul,li,p,h1,h2,h3,h4,h5,h6{ margin:0; padding:0}
+body{ font-size:12px; line-height:1.7em; color:#666;}
+ul{ list-style:none}
+img{ border:none}
+a{ text-decoration:none; color:#666;}
+a:hover{ text-decoration:underline;}
+.fl{ float:left}
+.fr{ float:right}
+
+.center{ width:1000px; margin:0 auto;}
+a:hover img {
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-ms-transition: all .2s linear;
+	transition: all .2s linear;
+}
+.clearfix:after{
+   content:".";/*加一段内容*/
+   display:block;/*让生成的元素以块级元素显示，占满剩余空间*/
+   height:0;/*避免生成的内容破坏原有布局高度*/
+   clear:both;/*清除浮动*/
+   visibility:hidden;/*让生成的内容不可见*/
+  }
+ .clearfix{zoom:1;/*为IE6，7的兼容性设置*/}
+
+
+/*header*/
+header{width: 100%; height: 158px; 
+	background: url(../images/top-bg.jpg) repeat-x;}
+header .top{ height: 114px; }
+header .top .logo{ padding-top:40px; }
+header .top div:last-child{padding-top:50px;  }
+header .top div:last-child li{float:left;}
+header .top div:last-child li a{ display:block; width: 66px; height:16px; background:url(../images/top-circle.jpg) no-repeat left center; padding-left: 16px;}
+header nav li{float:left;}
+header nav li a{display: block; width: 116px; height: 44px; font-size: 14px; color:#fff; font-weight:bold; font-family:"宋体"; background: url(../images/nav-split.jpg) no-repeat right center; text-align: center; line-height:44px;}
+
+header nav li:last-child a{ background:none; }
+header nav li a:hover{ text-decoration: none; background: #5F6368; }
+
+/*二级导航*/
+header nav li ul{ width: 116px; height:176px; background: #ccc; display: none;}
+header nav li ul li a{background: none;}
+header nav li:hover ul{ display: block; }
+
+
+/*banner*/
+#banner{height: 350px; background: url(../images/banner.jpg) center center;}
+
+/*main*/
+main{width: 100%; height: 510px; background: url(../images/main.jpg) repeat-x; margin-top: 25px;}
+
+main .con{ width: 640px; }
+main .con .about .title{width: 100%; height:36px; background:url(../images/main-title-bottom.jpg) repeat-x left bottom; }
+main .title h2{ font-size: 16px; background:url(../images/main-circle.png) no-repeat left center; padding-left: 20px; }
+main .title h2 span{ color:#4EB1E3; }
+main .con .about .content{text-indent: 2em;line-height: 24px;padding-top: 15px;}
+main .con .about .content img{margin-right: 10px;}
+
+main .con .show{width: 100%;margin-top: 30px;}
+main .con .show .title{width: 100%; height:36px; background:url(../images/main-show-bg.jpg)repeat-x;line-height: 36px;border-left: 1px solid #DCDCDC; border-right: 1px solid #DCDCDC;border-radius: 4px;}
+main .con .show ul{width: 100%;height: 150px;margin-top: 14px;}
+main .con .show li{width: 198px;text-align: center;margin-left: 12px;}
+
+main aside{width: 336px;}
+main aside .title{width: 100%;height: 36px;background: url(../images/main-show-bg.jpg) repeat-x;line-height: 36px;border-left: 1px solid #DCDCDC; border-right: 1px solid #DCDCDC;border-radius: 4px;}
+main aside ul{width: 100%;height: 200px;margin-top: 10px;}
+main aside li{width: 100%;height: 32px;line-height: 32px;border-bottom: 1px dashed #ccc;}
+
+
+
+
+
+main aside{}
