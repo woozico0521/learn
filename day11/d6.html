@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+年龄:<input type="text" id="age" />
+<button id="btn">确定</button>
+<h1 id="msg">信息提示</h1>
+<script>
+//初始化
+	var oInput=document.getElementById("age");
+	var oBtn=document.getElementById("btn");
+	var oMsg=document.getElementById("msg");
+	var age=0;
+//实现功能
+	oBtn.onclick=function(){
+		age=oInput.value;
+		if(age<18 || age>30){
+		oMsg.innerHTML="未通过!";
+	}else{
+		oMsg.innerHTML="可以入伍";
+	}
+
+	
+	console.log(age);
+	}
+</script>	
+</body>
+</html>

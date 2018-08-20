@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+星期:<input type="text" id="age" />
+<button id="btn">确定</button>
+<h1 id="msg">信息提示</h1>
+<script>
+//初始化
+	var oInput=document.getElementById("age");
+	var oBtn=document.getElementById("btn");
+	var oMsg=document.getElementById("msg");
+	var week;
+//实现功能
+	oBtn.onclick=function(){
+		week=parseInt(oInput.value);
+		
+		switch(week){
+			case 1:
+				oMsg.innerHTML="看电影";
+			break;
+			case 2:
+				oMsg.innerHTML="打游戏";
+			break;
+			case 3:
+				oMsg.innerHTML="逛街";
+			break;
+			case 4:
+				oMsg.innerHTML="买买买";
+			break;
+			case 5:
+				oMsg.innerHTML="睡觉";
+			break;
+			case 6:
+				oMsg.innerHTML="追剧";
+			break;
+			default:
+				oMsg.innerHTML="吃吃吃";
+		}
+	
+	console.log(week);
+	}
+</script>	
+</body>
+</html>
