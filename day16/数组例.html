@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<img src="images/a3-con-05.jpg" width="400" id="photo" />
+<script>
+var pic=['a3-con-06.jpg','a3-con-07.jpg','a3-con-08.jpg','a3-con-09.jpg','a3-con-10.jpg','a3-con-11.jpg','a3-con-12.jpg'];//图片数组
+var oPh=document.getElementById("photo");
+var i=0;//数组下标变量
+
+oPh.onclick=function(){//匿名函数
+	//oPh.src="images/a3-con-07.jpg";
+
+	
+	/*oPh.src="images/"+pic[i];
+	i++;
+	if(i==pic.length){//当到最后一张图片时,返回0
+		i=0;
+	}*/
+	i==pic.length-1?i=0:oPh.src="images/"+pic[i++];
+	//i=(i==pic.length)?0:i++;
+	console.log(i,pic[i]);
+}
+</script>
+</body>
+</html>
