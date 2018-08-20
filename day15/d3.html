@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+
+//堆(heap)
+//原理共享:无论谁改动对象的值.所有人都能看到
+	var a={age:20};//创建一个对象
+	var b=a;//间接赋值,也是一个对象
+	b.age=24;//**引用类型(赋值)**
+	console.log(a.age);
+</script>
+</body>
+</html>
