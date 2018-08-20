@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>欢乐中秋,点击有礼</h1>
+    <div id="gift">
+        <div id="close"></div>
+        <ul>
+            <li>
+                <dl>
+                    <dt><img src="images/1.jpg"/></dt>
+                    <dd>雅诗兰黛小棕瓶</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt><img src="images/2.jpg"/></dt>
+                    <dd>雅诗兰黛沁水</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt><img src="images/3.jpg"/></dt>
+                    <dd>雅诗兰黛倾慕唇釉</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt><img src="images/4.jpg"/></dt>
+                    <dd>香奈儿5号</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt><img src="images/5.jpg"/></dt>
+                    <dd>香奈儿手表</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt><img src="images/6.jpg"/></dt>
+                    <dd>古驰手表</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt><img src="images/7.png"/></dt>
+                    <dd>阿玛尼唇釉</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt><img src="images/8.jpg"/></dt>
+                    <dd>谢谢参与</dd>
+                </dl>
+            </li>
+            <li class="nine">
+                <dl>
+                    <dt id="btn"><img src="images/start.jpg" id="pic"/></dt>
+                    <dd>开始抽奖</dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+<script>
+    //初始化变量
+    var oLi=document.getElementsByTagName("li");
+    var oBtn=document.getElementById("btn");
+    var oPic=document.getElementById("pic");
+    var num=i=t=0;//python定义计数器
+    
+    
+    oBtn.onclick=function(){
+        oPic.style.transform="scale(0.6)";
+        oPic.style.transition="1s";
+        oBtn.disabled=true;
+        view();//动画视图(view)
+    }
+        function view(){
+            num=parseInt(Math.random()*10+20);//确定顺时针循环次数(固定)
+            console.log('固定'+num)
+            //一.确定递归次数
+            if(i<num){//i:已完成的li循环的个数(变量),开始递归
+                i++;//每循环完一个li标签+1
+                setTimeout(view,200);
+                console.log('动态'+i)
+            }else{
+                oPic.style.transform="scale(0.8)";
+                oPic.style.transition="1s";
+                i=0;
+                
+            }
+            //二.动画 t:顺时针循环中每个li标签的下标
+            if(t<oLi.length-1){//先清除所有,再设置
+                for(var j=0;j<oLi.length-1;j++){
+                    oLi[j].style.border="2px solid #000";
+                    oLi[j].style.background="#fff";
+                }
+                oLi[t].style.border="2px solid #f00";
+                oLi[t].style.background="rgba(255,0,0,0.4)";
+                t++;
+            }else{
+                t=0;
+            }
+        }
+
+    
+
+
+</script>
+</body>
+</html>

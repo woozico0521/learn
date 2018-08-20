@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    div,ul,li,img{margin:0;padding:0;}
+    li{list-style:none;}
+    .main{width: 620px;height: 620px;background: #ccc;margin:20px auto;}
+    li{width: 180px;height: 180px;float: left;background: #fff;margin:20px 0 0 20px;line-height: 180px;text-align:center;}
+    li img{width: 180px;height: 180px;box-sizing: border-box;}
+    button{width: 180px;height: 180px;background: #fff;border:none;}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <ul>
+            <li><img src="images/1.jpg" /></li>
+            <li><img src="images/2.jpg" /></li>
+            <li><img src="images/3.jpg" /></li>
+            <li><img src="images/4.jpg" /></li>
+            <li><button id="start">开始抽奖</button></li>
+            <li><img src="images/5.jpg" /></li>
+            <li><img src="images/6.jpg" /></li>
+            <li><img src="images/7.png" /></li>
+            <li><img src="images/8.jpg" /></li>
+        </ul>
+    </div>
+<script>
+
+var oStart=document.getElementById("start");
+var oImg=document.getElementsByTagName("img");
+var i=0;
+oStart.onclick=function(){
+	oStart.disabled=true
+	view();
+	setTimeout(function(){
+		clearTimeout(start)
+		oStart.disabled=false
+	},2000)    
+}
+function view(){
+    oImg[i].style.border="";
+    i++;
+    if(i==oImg.length) i=0;
+    console.log(i);
+    oImg[i].style.border="2px solid #f00";
+    start=setTimeout(view,50);
+    
+}
+
+</script>
+</body>
+</html>
