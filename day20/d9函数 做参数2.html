@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+
+
+//函数立即调用(函数)();
+var show=function(name){
+    alert(name);
+}
+show("zyy");
+
+//上下二者等同
+(function(name){//匿名函数
+    alert(name);
+})("hhh");
+
+(function show(name){//有函数名
+    alert(name);
+})("kkk");
+
+
+</script>
+</body>
+</html>

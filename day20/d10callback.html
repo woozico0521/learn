@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+var show=function(){
+    alert("婉婉天天都爱国");
+}
+
+
+//callback回调函数
+function fn(arg,callback){
+    alert(arg);
+    var res=callback&&callback();//为了不写回调函数时不报错
+    //callback;
+    console.log("输出"+res);
+}
+
+//fn("我天天都爱学习");
+fn("学习使我快乐",show);
+
+
+</script>
+</body>
+</html>
