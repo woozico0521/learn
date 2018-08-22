@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li>我都好多不开心的事001</li>
+        <li>我都好多不开心的事002</li>
+        <li>我都好多不开心的事003</li>
+        <li>我都好多不开心的事004</li>
+        <li>说出来你也会不开心</li>
+    </ul>
+</div>
+<script>
+var oLi=document.getElementsByTagName("li");
+for(var i=0;i<oLi.length;i++){
+    oLi[i].onclick=function(){
+    //alert(this.innerHTML);
+    console.log(this.innerHTML);
+    }
+}
+
+</script>
+</body>
+</html>

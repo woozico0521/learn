@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function fn(){
+    var a="我是局部变量";
+    console.log(a,c);//父函数无法使用子函数的变量
+
+    function two(){//子函数可以使用父函数的变量
+        var c="我是子函数";
+        alert(a);
+    }
+    two();
+}
+fn();
+//alert(a);
+</script>
+</body>
+</html>

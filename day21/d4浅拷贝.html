@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+浅拷贝和深拷贝的区别?
+<script>
+//1浅copy
+var obj1={
+    name:"zyy",
+    addr:"济州",
+    dad:{
+        name:"地球",
+        addr:"太阳系"
+    }
+}
+var obj2=obj1;//对象,数组之间只有引用赋值
+obj1.name="老师天天说奇怪的话";
+obj1.addr="哈尔滨";
+console.log(obj2);
+
+</script>
+</body>
+</html>
