@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    div,ul,li{margin: 0;padding: 0;}
+    #box{width: 300px;height: 50px;border-bottom: 2px solid #ECF3F9;margin:40px auto;}
+    li{list-style: none;width: 60px;height: 50px;text-align:center;line-height: 60px;float: left;color: #666;}
+    a{text-decoration: none;color: #666;}
+    a:hover{color:#378CE8;}
+    span{color:#E5E8EC; float: right;}
+    .on{border-bottom: 2px solid #69AEF5;font-weight: bold;color: #378CE8}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <ul>
+            <li class="on"><a href="#">热点</a><span>|</span></li>
+            <li><a href="#">军事</a><span>|</span></li>
+            <li><a href="#">社会</a><span>|</span></li>
+            <li><a href="#">明星</a><span>|</span></li>
+            <li><a href="#">情感</a></li>
+        </ul>
+    </div>
+<script>
+var oLi=document.getElementsByTagName("li");
+var i=0;
+/* for(var i=0;i<oLi.length;i++){
+    oLi[i].index=i;
+    oLi[i].onclick=function(){
+        for(var i=0;i<oLi.length;i++){//先清除所有li样式
+            oLi[i].className="";
+        }
+        oLi[this.index].className="on";//点击添加
+    }
+} */
+    for(var i=0;i<oLi.length;i++){
+        (function(index){
+            oLi[i].onclick=function(){
+                for(var j=0;j<oLi.length;j++){
+                    oLi[j].className="";
+                }
+                oLi[index].className="on";
+            }
+        })(i);
+    }
+
+</script>
+</body>
+</html>

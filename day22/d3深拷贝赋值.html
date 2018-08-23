@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//2深copy
+var obj1={
+    name:"zyy",
+    addr:"济州",
+    dad:{
+        name:"地球",
+        addr:"太阳系"
+    }
+}
+
+function clone(obj){
+    var newObj=new Object();//创建一个新对象
+    for(var key in obj){//遍历传入的对象进行赋值
+        //newObj[key]=obj[key];//给新创建的对象进行赋值
+        if(typeof(obj[key])=='object'){//递归,判断是否是对象类型
+            newObj[key]=clone(obj[key]);
+            console.log(obj[key]);
+        }else{
+            newObj[key]=obj[key];
+            console.log(obj[key]);
+        }
+        
+    }
+    return newObj;//传值
+}
+
+
+var res=clone(obj1);
+console.log('clone: '+res);
+
+</script>     
+</body>
+</html>
