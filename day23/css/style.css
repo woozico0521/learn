@@ -1,0 +1,10 @@
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+img{border:0;}
+#container{width: 520px;height: 280px;margin:50px auto;position: relative;}
+#container #imgs img{width:520px;display: none;}
+#container #imgs img.on{display: block;}
+#container #nav{position: absolute;right: 20px;bottom: 50px;}
+#container #nav li.on{background: #FFA500;}
+#container #arrows{position: absolute;left: 20px;bottom: 50px;}
+#container #nav li,#container #arrows div{width: 20px;height: 20px;color: #fff;background: #000;float: left;margin-left: 5px;font:14px/20px '黑体';text-align: center;cursor: pointer;}
