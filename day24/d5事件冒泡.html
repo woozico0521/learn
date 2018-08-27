@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    div{font:40px/50px '黑体';color:#fff;}
+    #one{width: 400px;height: 200px;background: #ff0000;}
+    #two{width: 200px;height: 100px;background: #ffff00;}
+    #in{width: 100px;height: 50px;background: #0000ff;}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="one">one
+        <div id="two">two
+            <div id="in">in</div>
+        </div>
+    </div>
+<script>
+//冒泡事件形成:点击子集,父级的事件也会发生
+    /*阻止冒泡:
+    e.stopPropagation();
+    e.cancelBubble=true; */
+var one=document.getElementById("one");
+var two=document.getElementById("two");
+var oIn=document.getElementById("in");
+
+one.onclick=function(e){
+   
+    alert("one")
+    
+}
+
+two.onclick=function(){
+    alert("two")
+}
+
+oIn.onclick=function(){
+    alert("oIn")
+}
+
+</script>
+</body>
+</html>

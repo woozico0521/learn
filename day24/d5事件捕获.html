@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    div{font:40px/50px '黑体';color:#fff;}
+    #one{width: 400px;height: 200px;background: #ff0000;}
+    #two{width: 200px;height: 100px;background: #ffff00;}
+    #in{width: 100px;height: 50px;background: #0000ff;}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="one">one
+        <div id="two">two
+            <div id="in">in</div>
+        </div>
+    </div>
+<script>
+/* 
+事件冒泡和事件捕获的的本质:指当dom对象发生多层嵌套事件时,事件的执行顺序:
+1.事件捕获顺序:从里往外
+2.事件冒泡顺序:从外向里
+3.同一元素绑定多个事件时,先捕获,后冒泡
+
+obj.addEventListener(type,function(){},false)
+true:事件捕获
+false:事件冒泡
+捕获事件形成:点击子集,父级的事件也会发生
+
+ */
+    /*阻止冒泡:
+    e.stopPropagation();
+    e.cancelBubble=true; */
+var one=document.getElementById("one");
+var two=document.getElementById("two");
+var oIn=document.getElementById("in");
+
+/* one.onclick=function(e){
+   
+    alert("one")
+    
+}
+
+two.onclick=function(){
+    alert("two")
+}
+
+oIn.onclick=function(){
+    alert("oIn")
+} */
+
+//addEventListener:添加事件监听 适用于符合W3C的所有浏览器,IE9以下版本的浏览器除外!!!
+one.addEventListener('click',function(){
+    console.log("one")
+},false);
+
+two.addEventListener('click',function(e){
+    console.log("two")
+    //e.stopPropagation();
+},false)
+
+oIn.addEventListener('click',function(e){
+    console.log("in")
+    //e.stopPropagation();
+},false)
+
+
+one.addEventListener('click',function(){
+    console.log("事件捕获:one")
+},true);
+
+two.addEventListener('click',function(e){
+    console.log("事件捕获:two")
+    //e.stopPropagation();
+},true)
+
+oIn.addEventListener('click',function(e){
+    console.log("事件捕获:in")
+    //e.stopPropagation();
+},true)
+
+
+</script>
+</body>
+</html>

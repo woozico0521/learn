@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="msg">
+<script>
+//oncontextmenu:右键菜单事件
+//事件三要素:事件源,事件对象,事件处理方法
+var oInput=document.getElementById("msg");
+document.oncontextmenu=function(e){
+    var e=e||window.event;//兼容低版本IE浏览器
+    console.log(e);
+    console.log(this);
+    return false;//禁用右键菜单
+}
+
+</script>
+</body>
+</html>

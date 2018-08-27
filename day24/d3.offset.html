@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    img{margin:50px;}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<img src="images/01.jpg" id="img">
+<script>
+var oImg=document.getElementById("img");
+oImg.offsetWidth;//元素的css宽度(不是元素的实际宽度)
+oImg.offsetHeight;//元素的css高度
+oImg.offsetLeft;//以body左上角为原点,x轴坐标
+oImg.offsetTop;//以body左上角为原点,y轴坐标
+</script>
+</body>
+</html>

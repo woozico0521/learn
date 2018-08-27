@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="msg">死侍神</h1>
+<script>
+//this:我
+/* console.log(this);
+
+var a=30;
+console.log(window.a);
+ */
+
+//二.局部模式
+/* 
+function fn(){
+    var a = '函数fn';
+    console.log('fn=>'+this);//window
+}
+window.fn();
+
+2.setTimeout和setInterval中this=>window
+setInterval(fn,1000)
+
+//3.
+var fn=function(){
+    console.log('函数变量'+this)
+}
+fn()
+
+ */
+
+
+/* 5.DOM对象调用this=>调用的dom对象
+var oH1=document.getElementById("msg");
+oH1.onclick=function(){
+    console.log(this)
+} */
+</script>
+</body>
+</html>
